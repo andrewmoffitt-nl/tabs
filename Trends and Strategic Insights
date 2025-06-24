@@ -1,0 +1,27 @@
+<div style="display: flex; flex-wrap: wrap; border: 1px solid #ccc; font-family: Arial, sans-serif; max-width: 900px;">
+  <!-- Tab Titles -->
+  <div style="flex: 0 0 220px; background-color: #f1f1f1; border-right: 1px solid #ccc;">
+    <a href="#tab1" style="display: block; padding: 12px; text-decoration: none; color: #000; border-bottom: 1px solid #ccc;">Technology as a Driver</a>
+    <a href="#tab2" style="display: block; padding: 12px; text-decoration: none; color: #000; border-bottom: 1px solid #ccc;">Focus on Sustainability</a>
+    <a href="#tab3" style="display: block; padding: 12px; text-decoration: none; color: #000;">Diversification of Offerings</a>
+  </div>
+
+  <!-- Tab Content -->
+  <div style="flex: 1; padding: 20px;">
+    <div id="tab1">
+      <h3>Technology as a Driver</h3>
+      <p>Tools like real-time analytics, mobile booking platforms, and AI-powered customer service have streamlined operations and improved guest experiences globally.</p>
+      <p><strong>Example:</strong> Singapore’s Changi Airport leverages AI for efficient queue management and personalized traveller experiences.</p>
+    </div>
+    <div id="tab2">
+      <h3>Focus on Sustainability</h3>
+      <p>The rise of green tourism reflects consumer demand for eco-friendly practices, including reduced carbon footprints and waste management systems.</p>
+      <p><strong>Example:</strong> Norway’s fjord tourism integrates electric ferries and sustainable lodging to balance environmental protection with visitor growth.</p>
+    </div>
+    <div id="tab3">
+      <h3>Diversification of Offerings</h3>
+      <p>Destinations are creating year-round tourism products to combat seasonality and stabilize revenue.</p>
+      <p><strong>Example:</strong> Switzerland markets its ski resorts for summer hiking and wellness retreats to balance seasonal inflow.</p>
+    </div>
+  </div>
+</div>
