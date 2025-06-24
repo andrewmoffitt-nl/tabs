@@ -1,0 +1,139 @@
+<style>
+.tab-wrapper {
+  display: flex;
+  border: 1px solid #ccc;
+  max-width: 900px;
+  font-family: Arial, sans-serif;
+}
+
+/* Hide radio buttons */
+.tab-wrapper input[type="radio"] {
+  display: none;
+}
+
+/* Left column for tab labels */
+.tab-labels {
+  flex: 0 0 220px;
+  background-color: #f1f1f1;
+  border-right: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Basic tab label style */
+.tab-labels label {
+  padding: 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+  background-color: #f1f1f1;
+  font-weight: normal;
+}
+
+/* Highlight selected tab */
+#tab1:checked ~ .tab-labels label[for="tab1"],
+#tab2:checked ~ .tab-labels label[for="tab2"],
+#tab3:checked ~ .tab-labels label[for="tab3"] {
+  background-color: #d9ecff;
+  font-weight: bold;
+}
+
+/* Right column for content */
+.tab-panels {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Hide all tab content */
+.tab-content {
+  display: none;
+}
+
+/* Show selected tab's content */
+#tab1:checked ~ .tab-panels #content1,
+#tab2:checked ~ .tab-panels #content2,
+#tab3:checked ~ .tab-panels #content3 {
+  display: block;
+}
+</style>
+
+<div class="tab-wrapper">
+  <!-- Radio Buttons -->
+  <input type="radio" name="tabs" id="tab1" checked>
+  <input type="radio" name="tabs" id="tab2">
+  <input type="radio" name="tabs" id="tab3">
+
+  <!-- Tab Labels -->
+  <div class="tab-labels">
+    <label for="tab1">Community Engagement</label>
+    <label for="tab2">Education and Awareness</label>
+    <label for="tab3">Sustainable Tourism Practices</label>
+  </div>
+
+  <!-- Tab Content -->
+  <div class="tab-panels">
+    <div class="tab-content" id="content1">
+      <h3>Community Engagement</h3>
+      <p>Involving local residents in tourism planning ensures that tourism initiatives align with their needs, values, and priorities. Community-driven decisions guide infrastructure development, visitor policies, and cultural preservation efforts, fostering equity and trust.</p>
+
+      <h4>Examples</h4>
+      <ul>
+        <li><strong>Atlantic Canada:</strong> Community-based tourism programs empower residents to influence tourism development, ensuring benefits are equitably distributed and minimizing disruption to daily life.</li>
+        <li><strong>Costa Rica:</strong> Community-led eco-tourism projects allow locals to manage protected areas, blending conservation with sustainable income generation. This approach has strengthened both environmental preservation and community empowerment (Visit Costa Rica, 2023).</li>
+        <li><strong>Japan:</strong> In Kyoto, local authorities collaborate with residents to set limits on short-term rentals, reducing the strain of overtourism while preserving the city’s cultural heritage (Kyoto Tourism Board, 2023).</li>
+      </ul>
+
+      <p><em>If you’re interested in this topic and wish to learn more, consider this article describing the complex relationship between tourism and culture in the Amhara region of Ethiopia.</em> <a href="#" target="_blank">Access Here</a></p>
+
+      <h4>Strategies</h4>
+      <ul>
+        <li><strong>Restaurant Management:</strong> Involve local producers to create regionally inspired menus and promote economic inclusivity.</li>
+        <li><strong>Hotel Operations:</strong> Host town halls to gather community input on guest policies and facility expansions.</li>
+        <li><strong>Event Planning:</strong> Partner with local artists and performers to showcase authentic cultural heritage.</li>
+        <li><strong>Hospitality and Tourism:</strong> Build partnerships with community organizations to co-create sustainable tourism initiatives.</li>
+      </ul>
+    </div>
+
+    <div class="tab-content" id="content2">
+      <h3>Education and Awareness</h3>
+      <p>Educating tourists and local communities about responsible tourism practices reduces negative social impacts. This includes teaching tourists to respect local customs, minimize environmental damage, and contribute positively to the destinations they visit.</p>
+
+      <h4>Examples</h4>
+      <ul>
+        <li><strong>Parks Canada:</strong> Visitor campaigns encourage travelers to reduce waste, stay on marked trails, and support local businesses, protecting Canada’s natural and cultural assets (Parks Canada, 2023).</li>
+        <li><strong>Norway:</strong> The “Travel with Respect” campaign educates visitors on sustainable practices, such as limiting plastic use and respecting wildlife, while promoting cultural sensitivity.</li>
+        <li><strong>South Africa:</strong> Initiatives like “Leave a Positive Footprint” teach tourists to prioritize local businesses and reduce their environmental impact during safaris (South African Tourism Board, 2023).</li>
+      </ul>
+
+      <h4>Strategies</h4>
+      <ul>
+        <li><strong>Restaurant Management:</strong> Offer information on local culinary traditions and promote sustainable dining practices.</li>
+        <li><strong>Hotel Operations:</strong> Create brochures or videos educating guests about eco-friendly behaviours during their stay.</li>
+        <li><strong>Event Planning:</strong> Incorporate workshops or panels on sustainability and cultural respect in event programming.</li>
+        <li><strong>Hospitality and Tourism:</strong> Partner with environmental groups to provide tourist training on sustainability.</li>
+      </ul>
+
+      <p><em>If you’re interested in this topic and wish to explore additional resources, consider this website describing initiatives promoting responsible, sustainable and universally accessible tourism:</em> <a href="https://www.unwto.org" target="_blank">Visit UNWTO</a></p>
+    </div>
+
+    <div class="tab-content" id="content3">
+      <h3>Sustainable Tourism Practices</h3>
+      <p>Sustainable tourism prioritizes balancing the needs of travelers, communities, and the environment. Strategies such as visitor quotas, off-season promotions, and eco-friendly initiatives reduce resource strain and ensure long-term viability.</p>
+
+      <h4>Examples</h4>
+      <ul>
+        <li><strong>Iceland:</strong> Promotes off-season travel to distribute tourist activity and minimize environmental degradation around iconic sites like the Blue Lagoon and Golden Circle (Visit Iceland, 2023).</li>
+        <li><strong>Bhutan:</strong> Implements a “high-value, low-impact” tourism model, requiring visitors to pay a daily fee to limit numbers and fund local conservation efforts (Tourism Council of Bhutan, 2023).</li>
+        <li><strong>New Zealand:</strong> Encourages eco-tourism by supporting indigenous-led initiatives and implementing sustainability standards across tourism businesses (Tourism New Zealand, 2023).</li>
+      </ul>
+
+      <h4>Strategies</h4>
+      <ul>
+        <li><strong>Restaurant Management:</strong> Reduce food waste and source ingredients sustainably.</li>
+        <li><strong>Hotel Operations:</strong> Adopt energy-efficient systems and minimize single-use plastics.</li>
+        <li><strong>Event Planning:</strong> Select venues that meet green certification standards and prioritize zero-waste policies.</li>
+        <li><strong>Hospitality and Tourism:</strong> Develop itineraries highlighting eco-friendly activities and accommodations.</li>
+      </ul>
+    </div>
+  </div>
+</div>
