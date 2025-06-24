@@ -1,24 +1,89 @@
-<div style="display: flex; flex-wrap: wrap; border: 1px solid #ccc; font-family: Arial, sans-serif; max-width: 900px;">
-  <!-- Tab Titles -->
-  <div style="flex: 0 0 220px; background-color: #f1f1f1; border-right: 1px solid #ccc;">
-    <a href="#tab1" style="display: block; padding: 12px; text-decoration: none; color: #000; border-bottom: 1px solid #ccc;">Technology as a Driver</a>
-    <a href="#tab2" style="display: block; padding: 12px; text-decoration: none; color: #000; border-bottom: 1px solid #ccc;">Focus on Sustainability</a>
-    <a href="#tab3" style="display: block; padding: 12px; text-decoration: none; color: #000;">Diversification of Offerings</a>
+<style>
+/* General layout */
+.tab-wrapper {
+  display: flex;
+  border: 1px solid #ccc;
+  max-width: 900px;
+  font-family: Arial, sans-serif;
+}
+
+/* Hide radio buttons */
+.tab-wrapper input[type="radio"] {
+  display: none;
+}
+
+/* Tab label container */
+.tab-labels {
+  flex: 0 0 220px;
+  background-color: #f1f1f1;
+  border-right: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Base label style */
+.tab-labels label {
+  padding: 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+  background-color: #f1f1f1;
+  font-weight: normal;
+}
+
+/* Active tab style */
+#tab1:checked ~ .tab-labels label[for="tab1"],
+#tab2:checked ~ .tab-labels label[for="tab2"],
+#tab3:checked ~ .tab-labels label[for="tab3"] {
+  background-color: #d9ecff;
+  font-weight: bold;
+}
+
+/* Tab content container */
+.tab-panels {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Hide all content by default */
+.tab-content {
+  display: none;
+}
+
+/* Show selected tab's content */
+#tab1:checked ~ .tab-panels #content1,
+#tab2:checked ~ .tab-panels #content2,
+#tab3:checked ~ .tab-panels #content3 {
+  display: block;
+}
+</style>
+
+<div class="tab-wrapper">
+  <!-- Radio buttons -->
+  <input type="radio" name="tabs" id="tab1" checked>
+  <input type="radio" name="tabs" id="tab2">
+  <input type="radio" name="tabs" id="tab3">
+
+  <!-- Tab labels -->
+  <div class="tab-labels">
+    <label for="tab1">Technology as a Driver</label>
+    <label for="tab2">Focus on Sustainability</label>
+    <label for="tab3">Diversification of Offerings</label>
   </div>
 
-  <!-- Tab Content -->
-  <div style="flex: 1; padding: 20px;">
-    <div id="tab1">
+  <!-- Tab content -->
+  <div class="tab-panels">
+    <div class="tab-content" id="content1">
       <h3>Technology as a Driver</h3>
       <p>Tools like real-time analytics, mobile booking platforms, and AI-powered customer service have streamlined operations and improved guest experiences globally.</p>
       <p><strong>Example:</strong> Singapore’s Changi Airport leverages AI for efficient queue management and personalized traveller experiences.</p>
     </div>
-    <div id="tab2">
+    <div class="tab-content" id="content2">
       <h3>Focus on Sustainability</h3>
       <p>The rise of green tourism reflects consumer demand for eco-friendly practices, including reduced carbon footprints and waste management systems.</p>
       <p><strong>Example:</strong> Norway’s fjord tourism integrates electric ferries and sustainable lodging to balance environmental protection with visitor growth.</p>
     </div>
-    <div id="tab3">
+    <div class="tab-content" id="content3">
       <h3>Diversification of Offerings</h3>
       <p>Destinations are creating year-round tourism products to combat seasonality and stabilize revenue.</p>
       <p><strong>Example:</strong> Switzerland markets its ski resorts for summer hiking and wellness retreats to balance seasonal inflow.</p>
